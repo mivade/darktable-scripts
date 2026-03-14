@@ -14,11 +14,6 @@
 
 local dt = require "darktable"
 
--- Minimum darktable version: 5.4.1 (check if API available)
-if dt.configuration and dt.configuration.check_version then
-  dt.configuration.check_version("lens_exif_edit", {5, 4, 1})
-end
-
 -- Probe for exiftool
 local function exiftool_available()
   local f = io.popen("exiftool -ver 2>/dev/null")
